@@ -9,4 +9,8 @@ describe("max", () => {
   it("Should return the second argument if it is greater", () => {
     expect(max(6, 8)).toBe(8)
   })
+
+  it("Should return the first argument if arguments are equal", () => {
+    expect(max(10, 10)).toBe(10)
+  })
 })

@@ -16,3 +16,9 @@ export function calculateAverage(numbers) {
   const sum = numbers.reduce((sum, current) => sum + current, 0)
   return sum / numbers.length
 }
+
+export function calculateFactorial(n) {
+  if (n < 0) return undefined
+  if (n === 0 || n === 1) return 1;
+  return n * calculateFactorial(n - 1)
+}

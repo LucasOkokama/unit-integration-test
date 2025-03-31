@@ -4,9 +4,15 @@ function UserProfile({ userId }) {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
-      .then((res) => res.json())
-      .then((data) => setUser(data));
+    const fetchUser = async () => {
+      const res = await fetch(
+        `https://jsonplaceholder.typicode.com/users/${userId}`
+      );
+      const data = await res.json();
+      setUser(data);
+    };
+
+    fetchUser();
   }, [userId]);
 
   if (!user) return <p>Loading...</p>;

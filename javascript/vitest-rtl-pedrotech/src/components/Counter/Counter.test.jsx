@@ -19,4 +19,19 @@ describe("Counter", () => {
     await userEvent.click(counterButton);
     expect(counterValue.textContent).toEqual("2");
   });
+
+  it("Decrements the counter by one on button click", async () => {
+    render(<Counter />);
+
+    const counterButton = screen.getByRole("button", { name: /decrement/i });
+    const counterValue = screen.getByTestId("counter-value");
+
+    expect(counterValue.textContent).toEqual("0");
+
+    await userEvent.click(counterButton);
+    expect(counterValue.textContent).toEqual("-1");
+
+    await userEvent.click(counterButton);
+    expect(counterValue.textContent).toEqual("-2");
+  });
 });

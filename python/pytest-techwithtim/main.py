@@ -1,8 +1,12 @@
-def get_weather(temp):
-    if temp > 20:
-        return "hot"
+import requests
+
+
+def get_weather(city):
+    response = requests.get(f"https://api.weather.com/v1/{city}")
+    if response.status_code == 200:
+        return response.json()
     else:
-        return "cold"
+        raise ValueError("Could not fetch weather data")
 
 
 def add(a, b):

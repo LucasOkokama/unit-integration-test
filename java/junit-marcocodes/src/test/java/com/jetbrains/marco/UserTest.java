@@ -12,7 +12,17 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @ExtendWith(MockitoExtension.class)
 class UserTest {
-    User user = new User("Marco", 37, false, LocalDate.now().minusYears(37));
+
+    User user;
+
+    @BeforeEach
+    void setup(){
+        user =  new User("Marco", 37, false, LocalDate.now().minusYears(37));}
+
+    @AfterEach
+    void cleanup(){
+        user = null;
+    }
 
     @Test
     @DisplayName("User should be at least 18")

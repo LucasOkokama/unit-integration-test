@@ -1,5 +1,7 @@
 package com.jetbrains.marco;
 
+import com.jetbrains.util.Resources;
+import com.jetbrains.util.Xml;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -9,6 +11,9 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.xmlunit.assertj.XmlAssert;
 
 import java.time.LocalDate;
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static net.javacrumbs.jsonunit.assertj.JsonAssertions.assertThatJson;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -56,5 +61,14 @@ class UserTest {
     @CsvFileSource(resources = "/friends.csv", numLinesToSkip = 1)
     void allFriendsShouldAtLeastBe18FromCSV(String name, int age){
         assertThat(age).isGreaterThanOrEqualTo(18);
+    }
+
+    @TestFactory
+    Collection<DynamicTest> dynamicTestsCreatedThroughCode(){
+        List<Xml> xmls = Resources.toStrings("users.*\\.xml");
+
+        return xmls.stream().map(xml -> DynamicTest.dynamicTest(xml.name(), () -> {
+            XmlAssert.assertThat(xml.content()).hasXPath("/users/user/name");
+        })).collect(Collectors.toList());
     }
 }

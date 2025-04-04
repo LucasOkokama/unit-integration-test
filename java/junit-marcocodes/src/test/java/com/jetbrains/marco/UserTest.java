@@ -2,6 +2,9 @@ package com.jetbrains.marco;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.xmlunit.assertj.XmlAssert;
 
@@ -41,5 +44,17 @@ class UserTest {
     @Test
     void userShouldBeMarco(){
         assertThat(user.name()).startsWith("Mar");
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {20, 50, 80})
+    void allFriendsShouldAtLeastBe18(int age){
+        assertThat(age).isGreaterThanOrEqualTo(18);
+    }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/friends.csv", numLinesToSkip = 1)
+    void allFriendsShouldAtLeastBe18FromCSV(String name, int age){
+        assertThat(age).isGreaterThanOrEqualTo(18);
     }
 }

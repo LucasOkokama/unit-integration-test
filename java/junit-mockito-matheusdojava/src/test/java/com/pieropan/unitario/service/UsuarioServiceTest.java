@@ -35,4 +35,11 @@ class UsuarioServiceTest {
 
     Assertions.assertEquals(1, usuarios.size());
   }
+
+  @Test
+  @DisplayName("Deve lançar uma exceção com usuário menor de idade")
+  public void deveLancarExcecaoQuandoUsuarioTiverIdadeMenorQueDezoito(){
+    UsuarioRequest usuarioRequest = new UsuarioRequest("Matheus","matheus@dev.com","apenasUmTesteDeIdade", 17);
+    Assertions.assertThrows(MenorIdadeException.class, () -> usuarioService.salvar(usuarioRequest));
+  }
 }

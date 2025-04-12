@@ -57,32 +57,69 @@ The project explores unit and integration testing using multiple technologies. I
 
 # Requirements
 1. Install [`Node.js`](https://nodejs.org/en) and ensure it includes the `npm` package manager.
+2. Install [`Python`](https://www.python.org/downloads/) and ensure it includes the `pip` package manager.
+3. Install [`Java JDK`](https://www.oracle.com/java/technologies/downloads/) to run Java applications.
 
-
-# How to run locally (command line)
-1. Run a `git clone` of the repository:
-```
-git clone https://github.com/LucasOkokama/pexels-image-search.git
-```
-2. Open the `pexels-image-search` folder and install the `dependencies`:
-```
-cd pexels-image-search
-npm install
-```
-3. Create a [`Pexels account`](https://www.pexels.com/api/) and get an `API key`. Next, in the root folder, create a `.env` file and add your API key as follows:
-```
-VITE_PEXELS_API_KEY=<YOUR_API_KEY_HERE>
-```
-4. `Run the project`:
-```
-npm run dev
-```
-5. Access `localhost` to open the website:
-```
-http://localhost:5173
-```
 
 # References
+<table align="center">
+    <tr>
+        <th></th>
+        <th>Video</th>
+        <th>Tech</th>
+        <th>GitHub Repo</th>
+    </tr>
+    <tr>
+        <th>1.</th>
+        <th><a href="https://www.youtube.com/watch?v=zuKbR4Q428o">JavaScript Unit Testing Tutorial for Beginners</a></th>
+        <th>Vitest</th>
+        <th><a href="https://github.com/mosh-hamedani/javascript-testing-starter">javascript-testing-starter</a></th>
+    </tr>
+    <tr>
+        <th>2.</th>
+        <th><a href="https://www.youtube.com/watch?v=CxSL0knFxAs">React Vite Testing Tutorial For Beginners - Vitest Testing Crash Course</a></th>
+        <th>Vitest</th>
+        <th><a href="https://github.com/mosh-hamedani/javascript-testing-starter">react-vite-testing-tutorial</a></th>
+    </tr>
+    <tr>
+        <th>3.</th>
+        <th><a href="https://www.youtube.com/watch?v=EgpLj86ZHFQ">Please Learn How To Write Tests in Python… • Pytest Tutorial</a></th>
+        <th>Pytest</th>
+        <th><a href="#"></a></th>
+    </tr>
+    <tr>
+        <th>4.</th>
+        <th><a href="https://www.youtube.com/watch?v=YbpKMIUjvK8">How To Write Unit Tests in Python • Pytest Tutorial</a></th>
+        <th>Pytest</th>
+        <th><a href="https://github.com/pixegami/simple-pytest-tutorial">simple-pytest-tutorial</a></th>
+    </tr>
+    <tr>
+        <th>5.</th>
+        <th><a href="https://www.youtube.com/watch?v=vZm0lHciFsQ">Java Unit Testing with JUnit - Tutorial - How to Create And Use Unit Tests</a></th>
+        <th>JUnit</th>
+        <th><a href=""></a></th>
+    </tr>
+    <tr>
+        <th>6.</th>
+        <th><a href="https://www.youtube.com/watch?v=6uSnF6IuWIw">JUnit 5 Tutorial - Crash Course</a></th>
+        <th>JUnit</th>
+        <th><a href="https://github.com/marcobehlerjetbrains/junit5-tutorial">junit5-tutorial</a></th>
+    </tr>
+    <tr>
+        <th>7.</th>
+        <th><a href="https://www.youtube.com/watch?v=rBdPPHq7REw">Testes unitários com jUnit e Mockito</a></th>
+        <th>JUnit | Mockito</th>
+        <th><a href="https://github.com/matheuspieropan/aula-youtube/tree/main/Testes/unitario">aula-youtube/Testes/unitario</a></th>
+    </tr>
+     <tr>
+        <th>8.</th>
+        <th><a href="https://www.youtube.com/watch?v=XVFqOFKGeGM">Unit Testing in Spring Boot with JUnit 5 and Mockito | Part 1</a></th>
+        <th>Spring Boot Testing | JUnit | Mockito</th>
+        <th><a href="https://github.com/codesnippetjava/ecom"></a>ecom</th>
+    </tr>
+</table>
+
+    
 This project was inspired by the [`Flashdash`](https://flashdash-nine.vercel.app/) website created by [`Paulo Victor`](https://github.com/paulopbi).
 
 

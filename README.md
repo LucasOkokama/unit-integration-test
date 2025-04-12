@@ -31,6 +31,17 @@ The project explores unit and integration testing using multiple technologies. I
     </tr>
     <tr>
         <th>
+            Frameworks
+        </th>
+        <td>
+            <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+        </td>
+        <td>
+            <img alt="Spring Boot" src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" />
+        </td>
+    </tr>
+    <tr>
+        <th>
             Unit Testing
         </th>
         <td>
@@ -55,10 +66,12 @@ The project explores unit and integration testing using multiple technologies. I
 </table>
 
 
+
 # Requirements
 1. Install [`Node.js`](https://nodejs.org/en) and ensure it includes the `npm` package manager.
 2. Install [`Python`](https://www.python.org/downloads/) and ensure it includes the `pip` package manager.
 3. Install [`Java JDK`](https://www.oracle.com/java/technologies/downloads/) to run Java applications.
+
 
 
 # References
@@ -115,12 +128,10 @@ The project explores unit and integration testing using multiple technologies. I
         <th>8.</th>
         <th><a href="https://www.youtube.com/watch?v=XVFqOFKGeGM">Unit Testing in Spring Boot with JUnit 5 and Mockito | Part 1</a></th>
         <th>Spring Boot Testing | JUnit | Mockito</th>
-        <th><a href="https://github.com/codesnippetjava/ecom"></a>ecom</th>
+        <th><a href="https://github.com/codesnippetjava/ecom">ecom</a></th>
     </tr>
 </table>
 
-    
-This project was inspired by the [`Flashdash`](https://flashdash-nine.vercel.app/) website created by [`Paulo Victor`](https://github.com/paulopbi).
 
 
 # License

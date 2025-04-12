@@ -2,6 +2,7 @@ package com.codesnippet.ecom.Service;
 
 import com.codesnippet.ecom.Entity.Product;
 import com.codesnippet.ecom.Repository.ProductRepository;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -24,10 +25,15 @@ public class ProductServiceTest {
   @Mock
   ProductRepository productRepository;
 
+  private static Product product = null;
+
+  @BeforeAll
+  public static void init(){
+    product = new Product(1, "Book", 60, "Harry Potter", 200);
+  }
+
   @Test
   void shouldAddProductSuccessfully(){
-    var product = new Product(1, "Book", 60, "Harry Potter", 200);
-
     when(productRepository.save(product)).thenReturn(product);
     var addedProduct = productService.addProduct(product);
 
@@ -39,7 +45,7 @@ public class ProductServiceTest {
 
   @Test
   void shouldThrowExceptionForInvalidProductName(){
-    var product = new Product(1, "", 60, "Harry Potter", 200);
+    product.setName("");
 
     RuntimeException runtimeException = assertThrows(RuntimeException.class, () ->  {
       productService.addProduct(product);

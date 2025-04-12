@@ -38,6 +38,19 @@ public class ProductServiceTest {
   }
 
   @Test
+  void shouldThrowExceptionForInvalidProductName(){
+    var product = new Product(1, "", 60, "Harry Potter", 200);
+
+    RuntimeException runtimeException = assertThrows(RuntimeException.class, () ->  {
+      productService.addProduct(product);
+    });
+
+    assertEquals("Invalid Name Of Product", runtimeException.getMessage());
+
+    verify(productRepository, never()).save(any(Product.class));
+  }
+
+  @Test
   public void shouldDeleteProductSuccessfully(){
     doNothing().when(productRepository).deleteById(1);
     productService.deleteProduct(1);

@@ -27,6 +27,14 @@ public class Product {
 
     public Product() {}
 
+    public Product(Integer id, String name, Integer price, String description, Integer stock) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.stock = stock;
+    }
+
     public Integer getStock() {
         return stock;
     }

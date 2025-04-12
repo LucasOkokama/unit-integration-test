@@ -8,6 +8,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -38,5 +42,21 @@ public class ProductServiceTest {
     doNothing().when(productRepository).deleteById(1);
     productService.deleteProduct(1);
     verify(productRepository, times(1)).deleteById(1);
+  }
+
+  @Test
+  void validadeProductName() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    Method validadeProductName = ProductService.class.getDeclaredMethod("validateProductName", String.class);
+    validadeProductName.setAccessible(true);
+    Boolean book = (Boolean) validadeProductName.invoke(productService, "Book");
+    assertTrue(book);
+  }
+
+  @Test
+  void validadeProductNameIfNameIsInvalid() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    Method validadeProductName = ProductService.class.getDeclaredMethod("validateProductName", String.class);
+    validadeProductName.setAccessible(true);
+    Boolean book = (Boolean) validadeProductName.invoke(productService, "");
+    assertFalse(book);
   }
 }

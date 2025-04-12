@@ -32,4 +32,11 @@ public class ProductServiceTest {
     assertEquals(product.getId(), addedProduct.getId());
     assertEquals(product.getName(), addedProduct.getName());
   }
+
+  @Test
+  public void shouldDeleteProductSuccessfully(){
+    doNothing().when(productRepository).deleteById(1);
+    productService.deleteProduct(1);
+    verify(productRepository, times(1)).deleteById(1);
+  }
 }

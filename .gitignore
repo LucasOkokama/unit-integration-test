@@ -1,122 +1,138 @@
-# Node.js dependencies
-
+############################################################
+# 📁 Node.js
+############################################################
 node_modules/
-
-# Debug logs
-
-npm-debug.log*  
-yarn-debug.log*  
-yarn-error.log\*
-
-# Build output
-
-build/  
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 dist/
+build/
 
-# System files
-
-.DS_Store  
-Thumbs.db
-
-# IDE settings
-
-.vscode/  
-.idea/
-
-# Environment variables
-
-.env  
-.env.local  
-.env.\*.local
-
-# Logs, backups, and swap files
-
-_.log  
-_.bak  
-\*.swp
-
-# Python cache files
-
-**pycache**/  
-_.py[cod]  
-_$PYTHONLEGACYWINDOWSSTDIO
-
-# Python virtual environments
-
-venv/  
-.env/  
-.venv/  
-Pipfile  
-Pipfile.lock  
+############################################################
+# 🐍 Python
+############################################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+*.pyd
+*.bak
+*.swp
+*.swo
+.env/
+.venv/
+venv/
+pip-log.txt
+Pipfile
+Pipfile.lock
 poetry.lock
 
-# Jupyter Notebook checkpoints
+# Test & coverage
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+*.cover
+htmlcov/
+.tox/
+nosetests.xml
 
+# Jupyter
 .ipynb_checkpoints/
 
-# Test and coverage files
-
-.pytest_cache/  
-.mypy_cache/  
-.coverage  
-htmlcov/  
-.tox/  
-nosetests.xml  
-coverage.xml  
-\*.cover
-
-# Database files
-
-_.sqlite3  
-_.db  
-\*.dump
-
-# IDE and editor settings
-
-_.vscode/  
-_.idea/  
-\*.swp
-
+############################################################
+# ☕ Java
+############################################################
+*.class
+*.jar
+*.war
+*.ear
 target/
+*.log
+*.tmp
+*.swp
+*.bak
+*.db
+*.sqlite3
+*.dump
+
+# Maven
+.mvn/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
 
-### IntelliJ IDEA
+# Gradle
+.gradle/
+build/
 
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-_.iws
-_.iml
-\*.ipr
-
-### Eclipse
-
+# Eclipse
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 
-### NetBeans
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+.idea/libraries/
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
 
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
 
-### VS Code
+############################################################
+# 🌐 Angular / Front-end
+############################################################
+.angular/
+out-tsc/
+coverage/
+*.tsbuildinfo
 
-.vscode/
+############################################################
+# ⚙️ .NET / C#
+############################################################
+bin/
+obj/
+*.user
+*.suo
+*.vspscc
+*.vssscc
+*.dbmdl
+*.cache
+*.pdb
+*.mdb
+*.log
+*.tlog
+*.vs/
+*.psess
+*.vsp
+*.vspx
+*.csproj.user
+*.csproj.vspscc
+*.sln.docstates
 
-### Mac OS
+# ASP.NET secrets
+**/secrets.json
 
+############################################################
+# ⚙️ System files
+############################################################
 .DS_Store
+Thumbs.db
+
+############################################################
+# 🖥️ Editor configs
+############################################################
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "_id": "68001e732cd444c031e72ef7",
+      "content": "hello",
+      "creatorId": "68001e6d2cd444c031e72ef6",
+      "createdAt": "2025-04-16T21:17:39.631Z",
+      "creator": {
+        "_id": "68001e6d2cd444c031e72ef6",
+        "profilePicture": null,
+        "name": "sasss",
+        "username": "dexper054",
+        "bio": ""
+      }
+    },
+    {
+      "_id": "67ffb7a098190b7a13d008bd",
+      "content": "hool",
+      "creatorId": "67ffb78bf897b2f08aa629b4",
+      "createdAt": "2025-04-16T13:58:56.672Z",
+      "creator": {
+        "_id": "67ffb78bf897b2f08aa629b4",
+        "profilePicture": null,
+        "name": "D M",
+        "username": "kavya",
+        "bio": ""
+      }
+    }
+  ]
+}

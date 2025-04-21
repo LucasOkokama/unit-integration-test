@@ -16,6 +16,7 @@ namespace FudamentosTestes.Tests.Entities
         }
 
         [Fact]
+        [Trait("Approach", "Default")]
         public void Constructor_GivenAllParameters_ThenShouldSetThePropertiesCorrectly()
         {
             var expectedId = Guid.NewGuid();
@@ -31,6 +32,7 @@ namespace FudamentosTestes.Tests.Entities
         [InlineData("Ferrari")]
         [InlineData("Fusca")]
         [InlineData("")]
+        [Trait("Approach", "Theory_InlineData")]
         public void Constructor_GivenAllParameters_ThenShouldSetThePropertiesCorrectly_UsingTheoryInlineData(string expectedCarName)
         {
             var expectedId = Guid.NewGuid();
@@ -43,6 +45,7 @@ namespace FudamentosTestes.Tests.Entities
 
 
         [Fact]
+        [Trait("Approach", "Faker")]
         public void Constructor_GivenAllParameters_ThenShouldSetThePropertiesCorrectly_UsingFaker()
         {
             var expectedId = Guid.NewGuid();

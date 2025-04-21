@@ -20,5 +20,21 @@ namespace FudamentosTestes.Tests.Entities
             Assert.Equal(expectedId, car.Id);
             Assert.Equal(expectedName, car.Name);
         }
+
+        [Theory]
+        [InlineData("Ferrari")]
+        [InlineData("Fusca")]
+        [InlineData("")]
+        public void Constructor_GivenAllParameters_ThenShouldSetThePropertiesCorrectly_UsingTheoryInlineData(string expectedCarName)
+        {
+            var expectedId = Guid.NewGuid();
+
+            var car = new Car(expectedId, expectedCarName);
+
+            Assert.Equal(expectedId, car.Id);
+            Assert.Equal(expectedCarName, car.Name);
+        }
+
+
     }
 }

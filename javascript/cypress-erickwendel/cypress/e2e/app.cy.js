@@ -124,7 +124,58 @@ describe('Image Registration', () => {
 
     it("And the new item should be stored in the localStorage", () => {
       cy.getAllLocalStorage().should(localStorage => {
+        const localStorageItemsArray = JSON.parse(Object.values(localStorage[window.origin]))
+        const lsLastItem = localStorageItemsArray[localStorageItemsArray.length - 1]
 
+        assert.deepStrictEqual(lsLastItem, {
+          title: input.title,
+          imageUrl: input.url,
+        })
+      })
+    })
+
+    it('Then The inputs should be cleared', () => {
+      registerForm.elements.titleInput().should('have.value', '')
+      registerForm.elements.imageUrlInput().should('have.value', '')
+    })
+  })
+
+  describe('Submitting an image and updating the list', () => {
+    after(() => {
+      cy.clearAllLocalStorage()
+    })
+
+    const input = {
+      title: "Alien (1979)",
+      url: "https://wallpapers.com/images/hd/alien-1979-sci-fi-horror-movie-r3ro28y6u2pujp66.jpg"
+    }
+
+    it('Given I am on the image registration page', () => {
+      cy.visit('/')
+    })
+
+    it(`Then I have entered "${input.title}" in the title field`, () => {
+      registerForm.typeTitle(input.title)
+    })
+
+    it(`Then I have entered "${input.url}" in the URL field`, () => {
+      registerForm.typeUrl(input.url)
+    })
+
+    it("Then I click the submit button", () => {
+      registerForm.clickSubmit()
+    })
+
+    it("And the list of registered images should be updated with the new item", () => {
+      cy.get('#card-list .card-img').should((elements) => {
+        const lastElement = elements[elements.length - 1]
+        const lastElementSrc = lastElement.getAttribute('src')
+        assert.strictEqual(lastElementSrc, input.url)
+      })
+    })
+
+    it("And the new item should be stored in the localStorage", () => {
+      cy.getAllLocalStorage().should(localStorage => {
         const localStorageItemsArray = JSON.parse(Object.values(localStorage[window.origin]))
         const lsLastItem = localStorageItemsArray[localStorageItemsArray.length - 1]
 

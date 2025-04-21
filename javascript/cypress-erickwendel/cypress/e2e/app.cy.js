@@ -191,4 +191,42 @@ describe('Image Registration', () => {
       registerForm.elements.imageUrlInput().should('have.value', '')
     })
   })
+
+  describe('Refreshing the page after submitting an image clicking in the submit button', () => {
+    after(() => {
+      cy.clearLocalStorage()
+    })
+
+    const input = {
+      title: "Alien (1979)",
+      url: "https://wallpapers.com/images/hd/alien-1979-sci-fi-horror-movie-r3ro28y6u2pujp66.jpg"
+    }
+
+    it('Given I am on the image registration page', () => {
+      cy.visit('/')
+    })
+
+    it(`Then I have submitted an image by clicking the submit button`, () => {
+      registerForm.typeTitle(input.title)
+      registerForm.typeUrl(input.url)
+      registerForm.clickSubmit()
+      cy.wait(100)
+    })
+
+    it(`When I refresh the page`, () => {
+      cy.reload()
+    })
+
+    it("And the new item should be stored in the localStorage", () => {
+      cy.getAllLocalStorage().should(localStorage => {
+        const localStorageItemsArray = JSON.parse(Object.values(localStorage[window.origin]))
+        const lsLastItem = localStorageItemsArray[localStorageItemsArray.length - 1]
+
+        assert.deepStrictEqual(lsLastItem, {
+          title: input.title,
+          imageUrl: input.url,
+        })
+      })
+    })
+  })
 })

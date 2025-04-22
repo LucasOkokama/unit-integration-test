@@ -4,7 +4,7 @@
 This repository was created as a space to explore and consolidate knowledge in unit and integration testing, through practical code examples using various programming languages and testing tools. It serves as a structured archive for experimenting with different approaches, comparing techniques, and observing how testing concepts can be applied across different contexts. The goal is to build a deeper understanding of software testing, while maintaining a clean and organized collection of reference materials.
 
 # Tech Stack
-The project explores unit and integration testing using multiple technologies. It includes Java with JUnit and Mockito, Python with pytest, and JavaScript with Jest and Vitest. This diverse stack highlights different testing approaches and serves as a reference for understanding core testing principles across languages.
+The project explores unit and integration testing using multiple technologies. This diverse stack highlights different testing approaches and serves as a reference for understanding core testing principles across languages.
 
 <table align="center">
     <tr>
@@ -47,9 +47,12 @@ The project explores unit and integration testing using multiple technologies. I
         <td>
             <img alt="Jest" src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white" />
             <img alt="Vitest" src="https://img.shields.io/badge/-Vitest-252529?style=for-the-badge&logo=vitest&logoColor=FCC72B" />
+            <img alt="Cypress" src="https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e" />
         </td>
         <td>
             <img alt="Pytest" src="https://img.shields.io/badge/pytest-%23ffffff.svg?style=for-the-badge&logo=pytest&logoColor=2f9fe3" />
+            <img alt="JUnit" src="https://img.shields.io/badge/JUnit-_?style=for-the-badge&logo=junit5&logoColor=%23fff&color=%23DC524A" />
+            <img alt="xUnit" src="https://img.shields.io/badge/xUnit-_?style=for-the-badge&logo=x&logoColor=%23fff&color=%23000" />
         </td>
     </tr>
     <tr>
@@ -129,6 +132,30 @@ The project explores unit and integration testing using multiple technologies. I
         <th><a href="https://www.youtube.com/watch?v=XVFqOFKGeGM">Unit Testing in Spring Boot with JUnit 5 and Mockito | Part 1</a></th>
         <th>Spring Boot Testing | JUnit | Mockito</th>
         <th><a href="https://github.com/codesnippetjava/ecom">ecom</a></th>
+    </tr>
+    <tr>
+        <th>9.</th>
+        <th><a href="https://www.youtube.com/watch?v=6m5T3we4xes">Aprenda DO ZERO como escrever TESTES UNITÁRIOS com XUnit e medir a COBERTURA DE TESTES</a></th>
+        <th>xUnit</th>
+        <th><a href=""></a></th>
+    </tr>
+    <tr>
+        <th>10.</th>
+        <th><a href="https://www.youtube.com/watch?v=56N0P67ffIA">Cypress Para Iniciantes | e2e Tests Em Frontend Apps | Erick Wendel</a></th>
+        <th>Cypress</th>
+        <th><a href="https://github.com/ErickWendel/cypress-for-begginers">cypress-for-begginers</a></th>
+    </tr>
+    <tr>
+        <th>11.</th>
+        <th><a href="https://www.youtube.com/watch?v=R2zd1Gz2nV0">Cypress Course 2022 in 2 hours | Cypress Automation tutorial</a></th>
+        <th>Cypress</th>
+        <th><a href="https://github.com/bitfumes/cypress-course-2022">cypress-course-2022</a></th>
+    </tr>
+    <tr>
+        <th>12.</th>
+        <th><a href="https://www.youtube.com/watch?v=jG2uNrTREF8">.NET TESTES UNITÁRIOS DO ZERO | PARTE 01 | FAKERS, ASSERTIONS, TRAITS, FACTS, THEORIES, TRAITS</a></th>
+        <th>xUnit</th>
+        <th><a href="https://github.com/cristianWilliam/FundamentosTestes">FundamentosTestes</a></th>
     </tr>
 </table>
 

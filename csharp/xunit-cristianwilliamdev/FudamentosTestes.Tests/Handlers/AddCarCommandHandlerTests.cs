@@ -15,16 +15,17 @@ namespace FudamentosTestes.Tests.Handlers
         private readonly AddCarCommandHandler _handler;
         private readonly Faker _faker = new("pt_BR");
         private readonly ICarChassiValidatorService _mockCarChassiValidatorService;
+        private readonly AppDbContext _appDb;
 
         public AddCarCommandHandlerTests()
         {
             var dbContextOptions = new DbContextOptionsBuilder<AppDbContext>();
             dbContextOptions.UseInMemoryDatabase("FundamentosTestes");
-            var dbContext = new AppDbContext(dbContextOptions.Options);
+            _appDb = new AppDbContext(dbContextOptions.Options);
 
             _mockCarChassiValidatorService = Substitute.For<ICarChassiValidatorService>();
 
-            _handler = new AddCarCommandHandler(_mockCarChassiValidatorService, dbContext);
+            _handler = new AddCarCommandHandler(_mockCarChassiValidatorService, _appDb);
         }
 
         [Fact]
@@ -40,6 +41,25 @@ namespace FudamentosTestes.Tests.Handlers
 
             await resultAction.Should().ThrowAsync<InvalidChassiException>()
             .WithMessage($"[{carName}] chassi invalido!");
+        }
+
+        [Fact]
+        public async Task Handle_GivenChassiValid_ThenShouldInsertAndReturnNewCar()
+        {
+            var expectedCarName = _faker.Vehicle.Model();
+            var validCommand = new AddCarCommand(expectedCarName);
+
+            _mockCarChassiValidatorService.CheckIfValidAsync(Arg.Any<Guid>(), Arg.Any<CancellationToken>()).Returns(Task.FromResult(true));
+
+            var result = await _handler.Handle(validCommand, CancellationToken.None);
+            result.Name.Should().Be(expectedCarName);
+            result.Id.Should().NotBeEmpty();
+
+            var carId = result.Id;
+            var insertedCar = await _appDb.Cars.SingleAsync(x => x.Id == carId, CancellationToken.None);
+
+            insertedCar.Should().NotBeNull();
+            insertedCar.Name.Should().Be(expectedCarName);
         }
     }
 }

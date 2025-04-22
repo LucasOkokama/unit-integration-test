@@ -43,5 +43,15 @@ namespace FudamentosTestes.Tests.Handlers
             result.Id.Should().Be(carId);
             result.Name.Should().Be(carName);
         }
+
+        [Fact]
+        public async Task Handle_GivenInvalidCarId_ThenShouldReturnNull()
+        {
+            var getCarByIdQuery = new GetCarByIdQuery(Guid.NewGuid());
+
+            var result = await _handler.Handle(getCarByIdQuery, CancellationToken.None);
+
+            result.Should().BeNull();
+        }
     }
 }

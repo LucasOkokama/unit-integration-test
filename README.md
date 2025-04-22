@@ -74,6 +74,7 @@ The project explores unit and integration testing using multiple technologies. T
 1. Install [`Node.js`](https://nodejs.org/en) and ensure it includes the `npm` package manager.
 2. Install [`Python`](https://www.python.org/downloads/) and ensure it includes the `pip` package manager.
 3. Install [`Java JDK`](https://www.oracle.com/java/technologies/downloads/) to run Java applications.
+4. Install [`.NET SDK`](https://dotnet.microsoft.com/en-us/download) to run .NET applications.
 
 
 

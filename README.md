@@ -53,6 +53,7 @@ The project explores unit and integration testing using multiple technologies. T
             <img alt="Pytest" src="https://img.shields.io/badge/pytest-%23ffffff.svg?style=for-the-badge&logo=pytest&logoColor=2f9fe3" />
             <img alt="JUnit" src="https://img.shields.io/badge/JUnit-_?style=for-the-badge&logo=junit5&logoColor=%23fff&color=%23DC524A" />
             <img alt="xUnit" src="https://img.shields.io/badge/xUnit-_?style=for-the-badge&logo=x&logoColor=%23fff&color=%23000" />
+            <img alt="Selenium" src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&logo=selenium&logoColor=white" />
         </td>
     </tr>
     <tr>
@@ -157,6 +158,12 @@ The project explores unit and integration testing using multiple technologies. T
         <th><a href="https://www.youtube.com/watch?v=jG2uNrTREF8">.NET TESTES UNITÁRIOS DO ZERO | PARTE 01 | FAKERS, ASSERTIONS, TRAITS, FACTS, THEORIES, TRAITS</a></th>
         <th>xUnit</th>
         <th><a href="https://github.com/cristianWilliam/FundamentosTestes">FundamentosTestes</a></th>
+    </tr>
+    <tr>
+        <th>13.</th>
+        <th><a href="https://www.youtube.com/watch?v=71ECrViH_Ng">Selenium - Automatize Qualquer Tarefa na Internet com Python</a></th>
+        <th>Selenium</th>
+        <th><a href=""></a></th>
     </tr>
 </table>
 

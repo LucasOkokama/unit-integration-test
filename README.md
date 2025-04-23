@@ -165,6 +165,12 @@ The project explores unit and integration testing using multiple technologies. T
         <th>Selenium</th>
         <th><a href=""></a></th>
     </tr>
+    <tr>
+        <th>14.</th>
+        <th><a href="https://www.youtube.com/watch?v=jBOLRzjEERk">Seu próximo back-end Node com TESTES! (+ SOLID)</a></th>
+        <th>Vitest</th>
+        <th><a href=""></a></th>
+    </tr>
 </table>
 
 

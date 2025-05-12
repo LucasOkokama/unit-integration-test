@@ -82,91 +82,91 @@ The project explores unit and integration testing using multiple technologies. T
 # References
 <table align="center">
     <tr>
-        <th></th>
+        <th>Creator</th>
         <th>Video</th>
         <th>Tech</th>
         <th>GitHub Repo</th>
     </tr>
     <tr>
-        <th>1.</th>
+        <th>Programming with Mosh</th>
         <th><a href="https://www.youtube.com/watch?v=zuKbR4Q428o">JavaScript Unit Testing Tutorial for Beginners</a></th>
         <th>Vitest</th>
         <th><a href="https://github.com/mosh-hamedani/javascript-testing-starter">javascript-testing-starter</a></th>
     </tr>
     <tr>
-        <th>2.</th>
+        <th>PedroTech</th>
         <th><a href="https://www.youtube.com/watch?v=CxSL0knFxAs">React Vite Testing Tutorial For Beginners - Vitest Testing Crash Course</a></th>
         <th>Vitest</th>
         <th><a href="https://github.com/mosh-hamedani/javascript-testing-starter">react-vite-testing-tutorial</a></th>
     </tr>
     <tr>
-        <th>3.</th>
+        <th>Tech With Tim</th>
         <th><a href="https://www.youtube.com/watch?v=EgpLj86ZHFQ">Please Learn How To Write Tests in Python… • Pytest Tutorial</a></th>
         <th>Pytest</th>
         <th><a href="#"></a></th>
     </tr>
     <tr>
-        <th>4.</th>
+        <th>pixegami</th>
         <th><a href="https://www.youtube.com/watch?v=YbpKMIUjvK8">How To Write Unit Tests in Python • Pytest Tutorial</a></th>
         <th>Pytest</th>
         <th><a href="https://github.com/pixegami/simple-pytest-tutorial">simple-pytest-tutorial</a></th>
     </tr>
     <tr>
-        <th>5.</th>
+        <th>Coding with John</th>
         <th><a href="https://www.youtube.com/watch?v=vZm0lHciFsQ">Java Unit Testing with JUnit - Tutorial - How to Create And Use Unit Tests</a></th>
         <th>JUnit</th>
         <th><a href=""></a></th>
     </tr>
     <tr>
-        <th>6.</th>
+        <th>Marco Codes</th>
         <th><a href="https://www.youtube.com/watch?v=6uSnF6IuWIw">JUnit 5 Tutorial - Crash Course</a></th>
         <th>JUnit</th>
         <th><a href="https://github.com/marcobehlerjetbrains/junit5-tutorial">junit5-tutorial</a></th>
     </tr>
     <tr>
-        <th>7.</th>
+        <th>Matheus do Java</th>
         <th><a href="https://www.youtube.com/watch?v=rBdPPHq7REw">Testes unitários com jUnit e Mockito</a></th>
         <th>JUnit | Mockito</th>
         <th><a href="https://github.com/matheuspieropan/aula-youtube/tree/main/Testes/unitario">aula-youtube/Testes/unitario</a></th>
     </tr>
      <tr>
-        <th>8.</th>
+        <th>CodeSnippet</th>
         <th><a href="https://www.youtube.com/watch?v=XVFqOFKGeGM">Unit Testing in Spring Boot with JUnit 5 and Mockito | Part 1</a></th>
         <th>Spring Boot Testing | JUnit | Mockito</th>
         <th><a href="https://github.com/codesnippetjava/ecom">ecom</a></th>
     </tr>
     <tr>
-        <th>9.</th>
+        <th>Everton Oliveira 💻 Programação Backend</th>
         <th><a href="https://www.youtube.com/watch?v=6m5T3we4xes">Aprenda DO ZERO como escrever TESTES UNITÁRIOS com XUnit e medir a COBERTURA DE TESTES</a></th>
         <th>xUnit</th>
         <th><a href=""></a></th>
     </tr>
     <tr>
-        <th>10.</th>
+        <th>Erick Wendel</th>
         <th><a href="https://www.youtube.com/watch?v=56N0P67ffIA">Cypress Para Iniciantes | e2e Tests Em Frontend Apps | Erick Wendel</a></th>
         <th>Cypress</th>
         <th><a href="https://github.com/ErickWendel/cypress-for-begginers">cypress-for-begginers</a></th>
     </tr>
     <tr>
-        <th>11.</th>
+        <th>Bitfumes</th>
         <th><a href="https://www.youtube.com/watch?v=R2zd1Gz2nV0">Cypress Course 2022 in 2 hours | Cypress Automation tutorial</a></th>
         <th>Cypress</th>
         <th><a href="https://github.com/bitfumes/cypress-course-2022">cypress-course-2022</a></th>
     </tr>
     <tr>
-        <th>12.</th>
+        <th>Cristian William Dev</th>
         <th><a href="https://www.youtube.com/watch?v=jG2uNrTREF8">.NET TESTES UNITÁRIOS DO ZERO | PARTE 01 | FAKERS, ASSERTIONS, TRAITS, FACTS, THEORIES, TRAITS</a></th>
         <th>xUnit</th>
         <th><a href="https://github.com/cristianWilliam/FundamentosTestes">FundamentosTestes</a></th>
     </tr>
     <tr>
-        <th>13.</th>
+        <th>Hashtag Programação</th>
         <th><a href="https://www.youtube.com/watch?v=71ECrViH_Ng">Selenium - Automatize Qualquer Tarefa na Internet com Python</a></th>
         <th>Selenium</th>
         <th><a href=""></a></th>
     </tr>
     <tr>
-        <th>14.</th>
+        <th>Rocketseat</th>
         <th><a href="https://www.youtube.com/watch?v=jBOLRzjEERk">Seu próximo back-end Node com TESTES! (+ SOLID)</a></th>
         <th>Vitest</th>
         <th><a href=""></a></th>
